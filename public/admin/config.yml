@@ -68,6 +68,13 @@ collections:
         fields:
           - { name: "title", label: "Title", widget: "string" }
           - { name: "content", label: "Content", widget: "markdown" }
+          - name: "blocks"
+            label: "Content Blocks"
+            widget: "list"
+            fields:
+              - { name: "heading", label: "Heading", widget: "string" }
+              - { name: "image", label: "Image", widget: "image" }
+              - { name: "description", label: "Description", widget: "text" }
           - *seo
       - name: "typography"
         label: "Typography"
