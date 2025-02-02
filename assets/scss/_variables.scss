@@ -1,0 +1,12 @@
+$white: #fff;
+$black: #000;
+$gray-dark: #333;
+$gray: #ababab;
+$gray-light: #eee;
+
+$transitionTime: .3s;
+
+$mq-tablet: 550px;
+$mq-desktop: 992px;
+$mq-mobile-max: $mq-tablet - 0.001;
+$mq-tablet-max: $mq-desktop - 0.001;
