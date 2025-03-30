@@ -7,15 +7,19 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { onMounted } from 'vue'
 import mapMarkerIcon from '~/assets/images/icons/map-marker.svg'
+
+const props = defineProps<{
+  center: number[]
+}>()
 
 onMounted(async () => {
     const L = (await import('leaflet')).default;
     await import('leaflet/dist/leaflet.css');
 
-    const center = [50.1178544, 14.4289211];
+    const center = props.center;
 
     // Inicializace mapy
     const map = L.map('map', {

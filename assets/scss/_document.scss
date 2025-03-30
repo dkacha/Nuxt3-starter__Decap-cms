@@ -47,6 +47,7 @@ body {
 }
 
 img {
+  display: block;
   max-width: 100%;
   height: auto;
 }
@@ -87,4 +88,31 @@ ul {
       content: '';
     }
   }
+}
+
+blockquote {
+  position: relative;
+  margin: 0;
+  padding-left: 50px;
+  line-height: 1.5;
+  font-style: italic;
+  
+  @media (min-width: var.$mq-desktop) {
+    font-size: 16px;
+  }
+
+  &:before {
+    opacity: 0.4;
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: '';
+    width: 25px;
+    height: 25px;
+    background: url('../images/icons/quote-left.svg') no-repeat center / contain;
+  }
+}
+
+.img-loading {
+  background: var.$gray-light;
 }

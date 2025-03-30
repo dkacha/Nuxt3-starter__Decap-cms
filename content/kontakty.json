@@ -1,0 +1,22 @@
+{
+  "gps": "50.1178544, 14.4289211",
+  "description": "E-mail: [genesis@ateliergenesis.cz](mailto:genesis@ateliergenesis.cz)\\\nMobil: +420 604 268 857\\\nTel: +420 222 521 830, +420 222 516 112\n\nAtelier Genesis, spol. s r. o.\\\nNad Kazankou 194/32, Praha 7\\\nPraha 7 - Troja\\\n171 00\n\nIČ: 64574652\\\nDIČ: CZ64574652\\\nDatová schránka: nent9d2\n\n<small>vedeno Městským soudem v Praze odd.C , vložka 41787</small>",
+  "employees": [
+    {
+      "name": "Ing. arch. Vít Dušek",
+      "email": "genesis@ateliergenesis.cz"
+    },
+    {
+      "name": "Ing. arch. David Veselý",
+      "email": "vesely@ateliergenesis.cz"
+    },
+    {
+      "name": "Ing. Ludmila Knobová",
+      "email": "knobova@ateliergenesis.cz"
+    },
+    {
+      "name": "Ing. Diana Šimurková",
+      "email": "simurkova@ateliergenesis.cz"
+    }
+  ]
+}

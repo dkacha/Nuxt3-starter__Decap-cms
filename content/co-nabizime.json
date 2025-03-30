@@ -1,0 +1,37 @@
+{
+  "cover": {
+    "image": "/upload/co-nabizime/co-nabizime.jpg",
+    "alt": ""
+  },
+  "description": "Nabízíme následující činnosti podle povahy konkrétní zakázky",
+  "basic_info_boxes": [
+    {
+      "title": "Příprava zakázky",
+      "description": "* seznámení s místem stavby nebo objektu k rekonstrukci\n* ověření podmínek územně plánovací dokumentace\n* konzultace záměru se zadavatelem a pomoc při přípravě zadání\n* vypracování přehledu potřebných podkladů\n* předběžný finanční odhad"
+    },
+    {
+      "title": "Studie",
+      "description": "* variantní návrh dispozičního a výtvarného řešení\n* konzultace se zadavatelem a výběr varianty\n* čistopis studie včetně vizualizace návrhu"
+    },
+    {
+      "title": "Dokumentace pro územní řízení (DUR)",
+      "description": "* vypracování dokumentace v rozsahu podle vyhlášky o dokumentaci staveb\n* zajištění průzkumů, zaměření a dalších podkladů\n* zajištění odborných posudků potřebných pro povolení díla\n* zapracování připomínek dotčených orgánů státní správy"
+    },
+    {
+      "title": "Dokumentace pro stavební povolení (DSP)",
+      "description": "* vypracování dokumentace v rozsahu podle vyhlášky o dokumentaci staveb\n* zajištění průzkumů, zaměření a dalších podkladů\n* zajištění odborných posudků potřebných pro povolení díla\n* zapracování připomínek dotčených orgánů státní správy"
+    },
+    {
+      "title": "Dokumentace pro provedení stavby a výběr zhotovitele (DPS)",
+      "description": "* vypracování dokumentace v rozsahu podle vyhlášky o dokumentaci staveb včetně zpracování detailů, tabulek výrobků a skladeb konstrukcí.\n* vypracování položkového rozpočtu stavby pro nacenění prací dodavatelem"
+    },
+    {
+      "title": "Projekty interieru",
+      "description": "* výtvarný návrh interieru\n* zadávací dokumentace, která je podkladem pro výrobní dokumentaci vypracovanou dodavatelem jednotlivých výrobků a konstrukcí"
+    },
+    {
+      "title": "Autorský dozor",
+      "description": "Jedná se o výkon dozoru který objasňuje projekt v průběhu stavby a řeší případné problémy realizace. Nejedná se o technický dozor investora."
+    }
+  ]
+}

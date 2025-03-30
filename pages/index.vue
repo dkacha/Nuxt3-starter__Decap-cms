@@ -1,28 +1,27 @@
 <template>
   <div>
-    <app-image :width="590" :height="590">
-      <img src="../assets/images/works/hematologie_hk/home.jpg" alt="FN Hradec Králové - transfuzní oddìlení" loading="lazy">
-    </app-image>
+    <nuxt-img
+       :src="data.cover.image"
+       :alt="data.cover.alt"
+       :width="590"
+    />
 
-    <app-blockquote class="space-top-medium">
-      <p>
-        Genesis znamená počátek. Projekt je počátek. Tak začněte u nás. <br>
-        Základní myšlenka - návrh je pro každou stavbu nejdůležitější. <br>
-        My hledáme varianty řešení a z nich pak tu nejlepší.
-      </p>
-    </app-blockquote>
+    <div v-if="data.supplement" class="space-top-medium" v-html="marked(data.supplement)" />
 
-    <app-image class="space-top-medium" :width="590" :height="590">
-      <img src="../assets/images/works/rektorat_czu/home.jpg" alt="Česká zemědělská univerzita v Praze - budova rektorátu" loading="lazy">
-    </app-image>
-    <app-image class="space-top-medium" :width="590" :height="590">
-      <img src="../assets/images/works/ms_lipence/home.jpg" alt="MŠ Lipenec" loading="lazy">
-    </app-image>
-    <app-image class="space-top-medium" :width="590" :height="590">
-      <img src="../assets/images/works/onmb/home.jpg" alt="ON Mladá Boleslav - pavilon 5" loading="lazy">
-    </app-image>
-    <app-image class="space-top-medium" :width="590" :height="590">
-      <img src="../assets/images/works/kostelec/home.jpg" alt="Rekonstrukce zámku v Kostelci nad Č. lesy" loading="lazy">
-    </app-image>
+    <img-lazy
+      v-for="(photo, index) in data.photoList"
+      :key="index"
+      :src="photo.image"
+      :alt="photo.alt"
+      :width="590"
+      :height="590"
+      class="space-top-medium" 
+    />
   </div>
 </template>
+
+
+<script setup lang="ts">
+import data from '@/content/uvod.json'
+import { marked } from 'marked'
+</script>

@@ -1,9 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+
+  modules: ['@nuxt/image'],
   ssr: true,
-  compatibilityDate: '2025-02-02',
+  compatibilityDate: '2025-09-02',
   devtools: { enabled: true },
   app: {
+
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       htmlAttrs: {
@@ -28,5 +31,5 @@ export default defineNuxtConfig({
         trailingSlash: 'append'
       }
     }
-  }
+  },
 })

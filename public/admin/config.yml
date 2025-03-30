@@ -5,92 +5,113 @@ local_backend: true
 backend:
   name: git-gateway
   branch: main # Branch to update (optional; defaults to master)
+locale: cs
 
-media_folder: "public/upload"
+media_folder: "/public/upload"
 public_folder: "/"
 
 site_url: https://lovely-crepe-8a1468.netlify.app
 
-media_library:
-  name: cloudinary
-  # output_filename_only: true
-  config:
-    cloud_name: dw1alrx4e
-    api_key: 612952679821124
+# --- Reusable components ---
+basic_info_box: &basic_info_box
+  - { label: "Nadpis", name: "title", widget: "string" }
+  - { label: "Popis", name: "description", widget: "markdown" }
 
+photo_item: &photo_item
+  - { label: "Obrázek", name: "image", widget: "image", required: true }
+  - { label: "Popis obrázku (alt)", name: "alt", widget: "string", required: false }
 
-# SEO anchor:
-seo: &seo
-  name: "SEOmetaData"
-  label: "SEO"
-  widget: "object"
-  collapsed: true
-  fields: 
-    - { name: "metaTitle", label: "SEO Title", widget: "string", default: "{{ title }}", required: true }
-    - { name: "metaDescription", label: "SEO Description", widget: "string", pattern: [".{20,160}", "between 20 and 160 characters"], required: true, hint: "must be between 20 and 160 characters" }
-    - { name: "metaImage", label: "SEO image", widget: "image"}
-    - { name: "keywords", label: "keywords", widget: "string", hint: "keywords are comma seperated", required: false }
+photo_item-1-1: &photo_item-1-1
+  - { label: "Obrázek (1x1)", name: "image", widget: "image", required: true }
+  - { label: "Popis obrázku (alt)", name: "alt", widget: "string", required: false  }
 
+# our-work komponenta: Reference s galerií obrázků
+our_work_component: &our_work_component
+  - { label: "Nadpis reference", name: "reference_heading", widget: "string" }
+  - label: "Galerie obrázků"
+    name: "gallery"
+    widget: "list"
+    fields:
+      - { label: "Obrázek", name: "image", widget: "image", required: true }
+      - { label: "Popis obrázku (alt)", name: "alt", widget: "string" }
 
+# employee komponenta: jméno a email
+employee: &employee
+  - { label: "Jméno", name: "name", widget: "string" }
+  - { label: "Email", name: "email", widget: "string" }
 
 collections:
-  - name: "globalContent"
-    label: "global content"
-    files: 
-      - label: "buttons"
-        name: "buttons"
-        file: "content/site/buttons.md"    
-        fields: 
-          - label: "next"
-            name: "next"
-            widget: "string"        
-          - label: "previous"
-            name: "previous"
-            widget: "string"        
-          - label: "close"
-            name: "close"
-            widget: "string"        
-          - label: "article: more"
-            name: "article"
-            widget: "string"
-            default: "read more"
-          - label: "form: send"
-            name: "send"
-            widget: "string"
-        
-  # SINGLE PAGES
   - name: "pages"
-    label: "Pages"
+    label: "Stránky"
+    format: "json" 
+    extension: "json" 
     files:
-      - name: "home"
-        label: "Home"
-        file: "content/pages/home.md"
+
+      - file: "content/uvod.json"
+        label: "Úvod"
+        name: "uvod"
+        media_folder: "/public/upload/uvod"
+        public_folder: "/upload/uvod/" 
         fields:
-          - { name: "title", label: "Title", widget: "string" }
-          - { name: "content", label: "Content", widget: "markdown" }
-          - name: "blocks"
-            label: "Content Blocks"
+          - { label: "Úvodní obrázek", name: "cover", widget: "object", fields: *photo_item }
+          - { label: "Uvítací text", name: "supplement", widget: "markdown" }
+          - { label: "List fotografií", name: "photoList", widget: "list", fields: *photo_item-1-1 }
+
+      - file: "content/kdo-jsme.json"
+        label: "Kdo jsme"
+        name: "kdo-jsme"
+        media_folder: "/public/upload/kdo-jsme"
+        public_folder: "/upload/kdo-jsme/" 
+        fields:
+          - { label: "Úvodní obrázek", name: "cover", widget: "object", fields: *photo_item }
+          - { label: "Úvodní popis", name: "description", widget: "markdown" }
+          - { label: "Jednotlivé body", name: "basic_info_boxes", widget: "list", fields: *basic_info_box }
+
+      - file: "content/co-nabizime.json"
+        label: "Co nabízíme"
+        name: "co-nabizime"
+        media_folder: "/public/upload/co-nabizime"
+        public_folder: "/upload/co-nabizime/" 
+        fields:
+          - { label: "Úvodní obrázek", name: "cover", widget: "object", fields: *photo_item }
+          - { label: "Úvodní popis", name: "description", widget: "markdown"}
+          - { label: "Jednotlivé body", name: "basic_info_boxes", widget: "list", fields: *basic_info_box }
+
+      - file: "content/nase-prace.md"
+        label: "Naše práce"
+        name: "nase-prace"
+        fields:
+          - label: "Our Work"
+            name: "our_work"
+            widget: "list"
+            fields: *our_work_component
+
+      - file: "content/kontakty.json"
+        label: "Kontakty"
+        name: "kontakty"
+        fields:
+          - { label: "GPS souřadnice středu mapy", name: "gps", widget: "string" }
+          - { label: "Kontaktní údaje", name: "description", widget: "markdown" }
+          - label: "Zaměstnanci"
+            name: "employees"
+            widget: "list"
+            fields: *employee
+
+      - file: "content/ke-stazeni.json"
+        label: "Ke stažení"
+        name: "ke-stazeni"
+        media_folder: "/public/upload/ke-stazeni"
+        public_folder: "/upload/ke-stazeni/"
+        fields:
+          - { label: "Úvodní obrázek", name: "cover", widget: "object", fields: *photo_item }
+          - label: "Sekce ke stažení"
+            name: "download_sections"
             widget: "list"
             fields:
-              - { name: "heading", label: "Heading", widget: "string" }
-              - { name: "image", label: "Image", widget: "image" }
-              - { name: "description", label: "Description", widget: "text" }
-          - *seo
-      - name: "typography"
-        label: "Typography"
-        file: "content/pages/typography.md"
-        fields:
-          - { name: "title", label: "Title", widget: "string" }
-          - { name: "content", label: "Content", widget: "markdown" }
-      - name: "Fiddly diddlies"
-        label: "diddlies"
-        extension: json
-        file: "content/pages/fiddly-diddlies.json"
-        fields:
-          - { name: "title", label: "Title", widget: "string" }
-          - { name: "test-fields", label: "field objects test", widget: "string", default: "fields.title" }
-          - { name: "content", label: "Content", widget: "markdown" }
-     
-
-          
-
+              - { label: "Nadpis sekce", name: "section_title", widget: "string" }
+              - label: "Soubory ke stažení"
+                name: "files"
+                widget: "list"
+                fields:
+                  - { label: "Název souboru", name: "title", widget: "string" }
+                  - { label: "Soubor", name: "file", widget: "file" }

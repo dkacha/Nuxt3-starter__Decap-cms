@@ -1,0 +1,25 @@
+{
+  "cover": {
+    "alt": "FN Hradec Králové - transfuzní oddělení",
+    "image": "/upload/uvod/home.jpg"
+  },
+  "supplement": "> Genesis znamená počátek. Projekt je počátek. Tak začněte u nás.\\\n> Základní myšlenka - návrh je pro každou stavbu nejdůležitější. \\\n> My hledáme varianty řešení a z nich pak tu nejlepší.",
+  "photoList": [
+    {
+      "image": "/upload/uvod/rektorat_cz-home.jpg",
+      "alt": "Česká zemědělská univerzita v Praze - budova rektorátu"
+    },
+    {
+      "image": "/upload/uvod/ms_lipence-home.jpg",
+      "alt": "MŠ Lipenec"
+    },
+    {
+      "image": "/upload/uvod/onmb-home.jpg",
+      "alt": "ON Mladá Boleslav - pavilon 5"
+    },
+    {
+      "image": "/upload/uvod/kostelec-home.jpg",
+      "alt": "Rekonstrukce zámku v Kostelci nad Č. lesy"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "cover": {
+    "alt": "Vít Dušek",
+    "image": "/upload/kdo-jsme/vit-dusek.jpg"
+  },
+  "description": "Atelier Genesis je pražské architektonické studio. Zabýváme se kompletní paletou projekčních prací od přípravy samotné zakázky až po realizaci prováděcí dokumentace stavby a následný autorský dozor.",
+  "basic_info_boxes": [
+    {
+      "title": "Personální struktura",
+      "description": "Kromě kmenových zaměstnanců firmy, inženýrů a architektů zaštiťujících jednotlivé zakázky spolupracujeme ustáleným týmem externistů, kteří zajišťují dílčí části projektů. Zejména se jedná o statiky, projektanty požárně bezpečnostního řešení, projektanty TZB a rozpočtáře. Díky tomu jsme schopní vyprojektovat i velké a komplexní stavby."
+    },
+    {
+      "title": "Historie",
+      "description": "Atelier Genesis vykonává projekční činnosti v oboru pozemních staveb od roku 1990. V roce 1995 byla založena společnost s ručením omezeným Atelier Genesis. Tato společnost fakticky nahrazuje předcházející firmu a s touto právní subjektivitou pracuje doposud. Současným majitelem a jednatelem firmy je Ing. arch. Vít Dušek (ČKA 02492)."
+    },
+    {
+      "title": "Co možná nevíte",
+      "description": "Genese je hebrejské slovo a znamená vznik, zrod i počátek. Genesis se jmenuje první biblická kniha, ve které je popsáno jak Bůh stvořil svět. Každá stavba také potřebuje „stvoření“, svůj počátek „dobrý plán“."
+    }
+  ]
+}
