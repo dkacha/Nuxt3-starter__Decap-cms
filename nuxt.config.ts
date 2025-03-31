@@ -1,12 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-
   modules: ['@nuxt/image'],
-  ssr: false,
-  compatibilityDate: '2025-09-02',
+  ssr: true,
+  compatibilityDate: '2025-03-31',
   devtools: { enabled: true },
   app: {
-
+    baseURL: '/ag-decap/',
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       htmlAttrs: {
