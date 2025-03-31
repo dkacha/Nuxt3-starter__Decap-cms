@@ -1,9 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-
   modules: ['@nuxt/image'],
   ssr: false,
-  compatibilityDate: '2025-09-02',
+  compatibilityDate: '2025-03-31',
   devtools: { enabled: true },
   app: {
 
