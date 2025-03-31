@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
 
   modules: ['@nuxt/image'],
-  ssr: true,
+  ssr: false,
   compatibilityDate: '2025-09-02',
   devtools: { enabled: true },
   app: {
